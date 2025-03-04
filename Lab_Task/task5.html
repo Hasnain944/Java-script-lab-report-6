@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 6 task 5 JavaScript</title>
+  </head>
+  <body>
+    <h1>Lab 6 task 5</h1>
+    <h1>Hasnain</h1>
+    <h1>B22F1427SE157</h1>
+    <h3>Check console for results</h3>
+
+    <script>
+      let nameInput = prompt("Enter employee name:");
+
+      let upperCaseName = nameInput.toUpperCase();
+      let lowerCaseName = nameInput.toLowerCase();
+      let formattedName = nameInput.replace(/ /g, "-");
+      let firstThreeLetters = nameInput.substring(0, 3);
+
+      console.log(`Input: ${nameInput}`);
+      console.log(`Uppercase: ${upperCaseName}`);
+      console.log(`Lowercase: ${lowerCaseName}`);
+      console.log(`Formatted: ${formattedName}`);
+      console.log(`First 3 Letters: ${firstThreeLetters}`);
+    </script>
+  </body>
+</html>

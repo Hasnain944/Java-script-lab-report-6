@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 6 task 2 JavaScript</title>
+  </head>
+  <body>
+    <h1>Lab 6 task 2</h1>
+    <h1>Hasnain</h1>
+    <h1>B22F1427SE157</h1>
+    <h3>Check console for results</h3>
+
+    <script>
+      function loanInterestCalculator() {
+        let loanAmount = parseFloat(prompt("Enter the loan amount:"));
+
+        if (isNaN(loanAmount) || loanAmount <= 0) {
+          alert("Invalid input. Please enter a valid loan amount.");
+          return;
+        }
+
+        let interestRate;
+        if (loanAmount < 10000) {
+          interestRate = 5;
+        } else if (loanAmount >= 10000 && loanAmount <= 50000) {
+          interestRate = 4;
+        } else {
+          interestRate = 3.5;
+        }
+
+        let totalPayable = loanAmount + loanAmount * (interestRate / 100);
+
+        console.log(`Loan: $${loanAmount.toLocaleString()}`);
+        console.log(`Interest: ${interestRate}%`);
+        console.log(`Total Payable: $${totalPayable.toLocaleString()}`);
+      }
+
+      loanInterestCalculator();
+    </script>
+  </body>
+</html>

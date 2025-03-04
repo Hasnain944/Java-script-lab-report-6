@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 6 task 1 JavaScript</title>
+  </head>
+  <body>
+    <h1>Lab 6 task 1</h1>
+    <h1>Hasnain</h1>
+    <h1>B22F1427SE157</h1>
+    <h3>Check console for results</h3>
+
+    <script>
+      function calculateParkingFee() {
+        let hours = parseFloat(prompt("enter the number of hours for parking"));
+        let isVIP = confirm("Are you a VIP customer?");
+        let rate = 0;
+
+        if (hours >= 1 && hours <= 2) {
+          rate = 5;
+        } else if (hours >= 3 && hours <= 5) {
+          rate = 4;
+        } else if (hours > 5) {
+          rate = 3;
+        } else {
+          alert("Invalid input. Please enter a valid number of hours.");
+          return;
+        }
+
+        let totalFee = hours * rate;
+
+        if (isVIP) {
+          totalFee *= 0.8;
+        }
+
+        console.log(`Hours parked: ${hours}`);
+        console.log(`VIP customer? ${isVIP ? "Yes" : "No"}`);
+        console.log(`Total Fee: $${totalFee.toFixed(2)}`);
+        console.log("----------------------");
+      }
+
+      calculateParkingFee();
+    </script>
+  </body>
+</html>

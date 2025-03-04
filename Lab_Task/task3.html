@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 6 task 3 JavaScript</title>
+  </head>
+  <body>
+    <h1>Lab 6 task 3</h1>
+    <h1>Hasnain</h1>
+    <h1>B22F1427SE157</h1>
+    <h3>Check console for results</h3>
+
+    <script>
+      function calculateDiscount(amount) {
+        let discount = 0;
+        if (amount >= 100 && amount <= 500) {
+          discount = 10;
+        } else if (amount > 500) {
+          discount = 15;
+        }
+        let finalAmount = amount - (amount * discount) / 100;
+
+        console.log(`Total shopping: $${amount}`);
+        console.log(`Discount Applied: ${discount}%`);
+        console.log(`Final Bill: $${finalAmount}`);
+      }
+
+      let shoppingAmount = parseFloat(prompt("Enter shopping amount:"));
+      calculateDiscount(shoppingAmount);
+    </script>
+  </body>
+</html>

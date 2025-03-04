@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 6 task 4 JavaScript</title>
+  </head>
+  <body>
+    <h1>Lab 6 task 4</h1>
+    <h1>Hasnain</h1>
+    <h1>B22F1427SE157</h1>
+    <h3>Check console for results</h3>
+
+    <script>
+      const calculateSalary = (experience) => {
+        let baseSalary = experience * 1000;
+        let bonus = experience > 5 ? 500 : 0;
+        let totalSalary = baseSalary + bonus;
+
+        console.log(`Experience: ${experience} years`);
+        console.log(`Total Salary: $${totalSalary}`);
+      };
+
+      let yearsOfExperience = parseInt(prompt("Enter years of experience:"));
+      calculateSalary(yearsOfExperience);
+    </script>
+  </body>
+</html>
